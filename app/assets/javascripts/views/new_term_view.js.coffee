@@ -9,6 +9,12 @@ YJ.NewTermView = Em.View.extend(
     # to the 'newTerm' attribute in the currentTerm model.
     termBinding: 'YJ.currentTerm.newTerm'
 
+    hasContentBinding: 'YJ.currentTerm.newTerm.hasContent'
+
+    disabled: (->
+      return !@get('hasContent') ? 'disabled' : ''
+    ).property('hasContent')
+
     templateName: 'templates/terms/new'
 
     # Event indicates user wants to keep the new term and add it
