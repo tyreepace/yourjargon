@@ -2,7 +2,7 @@
 term: {{view Ember.TextField valueBinding="term.term"}}
 definition: {{view Ember.TextArea valueBinding="term.description"}}
 <p>
-<button {{bindAttr class="disabled"}} {{bindAttr disabled}} {{action "add"}}> Submit </button>
+<button {{bindAttr class="disabled"}} {{bindAttr disabled="isDisabled"}} {{action "add"}}> Submit </button>
 <button {{action "cancel"}}> Cancel </button>
 </p>
 {{/view}}
